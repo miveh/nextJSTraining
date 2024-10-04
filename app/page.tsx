@@ -1,10 +1,12 @@
 import Image from "next/image";
 import ProductName from "./ProductName";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <ProductName />
     </>
   );
-}
+};
+
+export default Home;
