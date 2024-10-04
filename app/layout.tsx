@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/theme";
 import StoreProvider from "./StoreProvider";
 import { FC, ReactNode } from "react";
+import Sidebar from "@/components/organism/Sidebar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,14 +29,20 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fa">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{
+          // background: "rgb(158,201,182)",
+          background:
+            "linear-gradient(90deg, rgba(158,201,182,1) 0%, rgba(255,242,236,1) 66%, rgba(198,200,238,1) 100%)",
+        }}
       >
         <StoreProvider>
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
-              <p>Root Layout</p>
+              {/* <Header /> */}
+
+              <Sidebar />
               {children}
             </ThemeProvider>
           </AppRouterCacheProvider>
