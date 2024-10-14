@@ -1,12 +1,8 @@
 import Image from "next/image";
 import ProductName from "./ProductName";
 
-const Home = () => {
-  return (
-    <>
-      <ProductName />
-    </>
-  );
+const Dashboard = () => {
+  return <>{/* <ProductName /> */}</>;
 };
 
-export default Home;
+export default Dashboard;
